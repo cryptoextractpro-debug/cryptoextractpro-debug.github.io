@@ -28,11 +28,13 @@
     font-size:13px; font-weight:700; background:rgba(255,255,255,0.08); color:#9aa7b4; transition:.25s; }
   .num.done { background:var(--green); color:#04140d; }
   .btn { flex:1; display:flex; align-items:center; justify-content:center; gap:8px;
-    padding:14px 16px; border-radius:12px; font-size:15px; font-weight:600; text-decoration:none;
-    color:#fff; border:none; cursor:pointer; transition:.18s; }
+    padding:14px 16px; border-radius:12px; font-size:14.5px; font-weight:600; text-decoration:none;
+    color:#fff; border:none; cursor:pointer; transition:.18s; text-align:center; }
   .btn:active { transform:scale(.98); }
   .yt { background:#ff0033; } .yt:hover { background:#e6002e; }
   .x { background:#1a1d24; border:1px solid rgba(255,255,255,0.13); } .x:hover { background:#23272f; }
+  .arcus { background:#5b6cff; } .arcus:hover { background:#4a5bf0; }
+  .note { color:#6b7684; font-size:11.5px; margin:-6px 0 12px 40px; }
   .final { margin-top:22px; padding:18px; border-radius:14px;
     background:rgba(22,199,132,0.08); border:1px solid rgba(22,199,132,0.28); }
   .final .t { font-weight:700; font-size:15px; margin-bottom:6px; }
@@ -51,7 +53,7 @@
   <main class="card">
     <span class="badge">● <b>CryptoExtract</b></span>
     <h1>Récupère le bot 🤖</h1>
-    <p class="sub">Le bot de trading spot Arcus que j'utilise, <b>gratuit</b>. 3 étapes rapides 👇</p>
+    <p class="sub">Le bot de trading spot Arcus que j'utilise, <b>gratuit</b>. Fais ces étapes 👇</p>
 
     <div class="step">
       <div class="num" id="n1">1</div>
@@ -61,19 +63,25 @@
       <div class="num" id="n2">2</div>
       <a class="btn x" id="b2" href="https://twitter.com/intent/follow?screen_name=CryptoExtractYT" target="_blank" rel="noopener">Suivre @CryptoExtractYT sur X</a>
     </div>
+    <div class="step">
+      <div class="num" id="n3">3</div>
+      <a class="btn arcus" id="b3" href="https://app.arcus.xyz/ref/CRYPTOEXTRACT" target="_blank" rel="noopener">Créer ton compte Arcus avec mon lien</a>
+    </div>
+    <p class="note">↑ De toute façon nécessaire pour lancer le bot 😉</p>
 
     <div class="final">
-      <div class="t">3. Envoie-moi la preuve 📸</div>
-      <div class="d">Fais un <b>screenshot des 2</b> (on doit voir « <b>Abonné</b> » sur YouTube et « <b>Following/Abonné</b> » sur X), envoie-les-moi en <b>DM sur X</b>, et je te renvoie le lien du bot direct. 🚀</div>
-      <a class="dm" href="https://x.com/CryptoExtractYT" target="_blank" rel="noopener">📩 M'envoyer les screens en DM</a>
+      <div class="t">4. Envoie-moi la preuve 📸</div>
+      <div class="d">Screenshot ton <b>abonnement YouTube</b> + ton <b>follow X</b>, crée ton <b>compte Arcus avec mon lien</b>, puis <b>DM-moi le tout sur X</b>. Je vérifie et je t'envoie le lien du bot direct. 🚀</div>
+      <a class="dm" href="https://x.com/CryptoExtractYT" target="_blank" rel="noopener">📩 M'envoyer la preuve en DM</a>
     </div>
 
     <p class="disc">⚠️ Outil éducatif/expérimental. Utilise un <b>wallet dédié</b> avec un petit montant. Le trading fait perdre le spread ; <b>aucun rendement ni airdrop garanti</b>. Tu l'utilises à tes risques.</p>
   </main>
 
 <script>
-  document.getElementById('b1').addEventListener('click',function(){ var n=document.getElementById('n1'); n.classList.add('done'); n.textContent='✓'; });
-  document.getElementById('b2').addEventListener('click',function(){ var n=document.getElementById('n2'); n.classList.add('done'); n.textContent='✓'; });
+  ['1','2','3'].forEach(function(k){
+    document.getElementById('b'+k).addEventListener('click',function(){ var n=document.getElementById('n'+k); n.classList.add('done'); n.textContent='✓'; });
+  });
 </script>
 <script data-goatcounter="https://mikeperry.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
